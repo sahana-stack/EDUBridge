@@ -1,0 +1,24 @@
+{
+  "name": "edubridge-platform",
+  "version": "1.0.0",
+  "description": "EduBridge — AI-Powered Student Academic & Well-Being Platform",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve -s . -l 8080",
+    "dev": "serve . -l 8080"
+  },
+  "keywords": [
+    "education",
+    "ai",
+    "wellbeing",
+    "edtech",
+    "supabase",
+    "vercel"
+  ],
+  "author": "EduBridge Team",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "serve": "^14.2.3"
+  }
+}

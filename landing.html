@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduBridge — AI-Powered Student Academic & Well-Being Platform</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Landing Page Custom Stylesheet -->
+  <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="landing-body">
+
+  <!-- 1. Floating Sticky Navbar -->
+  <div class="saas-nav-wrapper">
+    <nav class="saas-navbar">
+      <a href="#" class="saas-brand">
+        <div class="saas-brand-logo">EB</div>
+        <span class="saas-brand-text">EduBridge</span>
+      </a>
+
+      <ul class="saas-nav-links" id="saasNavLinks">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#ai-section">Explainable AI</a></li>
+        <li><a href="#roles">Portals</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+      </ul>
+
+      <div class="saas-nav-actions">
+        <a href="index.html" class="btn-saas-secondary"><i class="fas fa-sign-in-alt"></i> Log In</a>
+        <a href="index.html" class="btn-saas-primary"><i class="fas fa-rocket"></i> Launch Portal</a>
+        <button class="saas-nav-toggle" id="mobileNavToggle"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- 2. Hero Section -->
+  <section class="hero-section">
+    <div class="saas-container">
+      <div class="hero-pill-badge">
+        <i class="fas fa-sparkles"></i> Next-Gen AI Decision Support for Education
+      </div>
+
+      <h1 class="hero-title">
+        A smarter bridge between <br>
+        <span class="hero-title-gradient">students, parents & teachers.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        EduBridge brings academic performance, study habits, lifestyle routines, and mental well-being into one unified, privacy-first decision-support platform.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="index.html" class="btn-saas-primary" style="padding: 14px 32px; font-size: 16px;">
+          <i class="fas fa-arrow-right"></i> Get Started
+        </a>
+        <a href="#product-showcase" class="btn-saas-secondary" style="padding: 14px 28px; font-size: 16px;">
+          <i class="fas fa-play"></i> Explore Features
+        </a>
+      </div>
+
+      <!-- Hero Visual: Product Interface Mockup -->
+      <div class="hero-product-frame">
+        <!-- Floating Badges -->
+        <div class="floating-card-badge left">
+          <div style="background: rgba(99, 102, 241, 0.15); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #6366f1;">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div>
+            <div style="font-weight: 700; font-size: 13px; color: #0f172a;">AI Practice Plan</div>
+            <div style="font-size: 11px; color: #64748b;">30-min Math Factoring Sprint</div>
+          </div>
+        </div>
+
+        <div class="floating-card-badge right">
+          <div style="background: rgba(16, 185, 129, 0.15); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #10b981;">
+            <i class="fas fa-bed"></i>
+          </div>
+          <div>
+            <div style="font-weight: 700; font-size: 13px; color: #0f172a;">Sleep & Retention</div>
+            <div style="font-size: 11px; color: #64748b;">7.5 Hours Optimal Rest</div>
+          </div>
+        </div>
+
+        <div class="browser-header">
+          <div class="browser-dot red"></div>
+          <div class="browser-dot yellow"></div>
+          <div class="browser-dot green"></div>
+          <span class="browser-url">https://app.edubridge.edu/student/dashboard</span>
+        </div>
+
+        <div class="product-preview-body">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div>
+              <h3 style="font-size: 18px; font-weight: 800; color: #0f172a;">Student Overview — Alex Morgan</h3>
+              <p style="font-size: 13px; color: #64748b;">Grade 10-A | Integrated Academic & Well-Being View</p>
+            </div>
+            <span class="badge badge-success">Live Status: Synced</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 20px;">
+            <div style="background: #ffffff; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0;">
+              <span style="font-size: 11px; color: #64748b; font-weight: 600;">ACADEMIC AVERAGE</span>
+              <div style="font-size: 22px; font-weight: 800; color: #4f46e5; margin-top: 4px;">82.4%</div>
+            </div>
+            <div style="background: #ffffff; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0;">
+              <span style="font-size: 11px; color: #64748b; font-weight: 600;">WEEKLY STUDY TIME</span>
+              <div style="font-size: 22px; font-weight: 800; color: #06b6d4; margin-top: 4px;">4.2 Hours</div>
+            </div>
+            <div style="background: #ffffff; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0;">
+              <span style="font-size: 11px; color: #64748b; font-weight: 600;">ATTENDANCE RATE</span>
+              <div style="font-size: 22px; font-weight: 800; color: #10b981; margin-top: 4px;">94%</div>
+            </div>
+            <div style="background: #ffffff; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0;">
+              <span style="font-size: 11px; color: #64748b; font-weight: 600;">WELL-BEING INDEX</span>
+              <div style="font-size: 22px; font-weight: 800; color: #8b5cf6; margin-top: 4px;">Level 4/5</div>
+            </div>
+          </div>
+
+          <div style="background: #ffffff; padding: 16px; border-radius: 12px; border-left: 4px solid #4f46e5; border: 1px solid #e2e8f0;">
+            <div style="font-size: 13px; font-weight: 700; color: #4f46e5;">EXPLAINABLE AI RECOMMENDATION</div>
+            <p style="font-size: 13px; color: #334155; margin-top: 4px;">
+              Mathematics score dropped from 88% to 62% in Midterm Exam. Recommended: Allocate two 30-minute practice blocks this week on quadratic equations factoring.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Trust / Social Proof Strip -->
+  <section class="trust-strip-section">
+    <div class="saas-container">
+      <div class="trust-title">Designed to connect the complete student journey</div>
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fas fa-user-graduate"></i></div>
+          <div>
+            <h4 style="font-size: 16px; font-weight: 800; margin-bottom: 4px;">Students</h4>
+            <p style="font-size: 13px; color: var(--text-muted);">Learn, plan time effectively, track goals, and receive personalized study guidance.</p>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fas fa-users-between-lines"></i></div>
+          <div>
+            <h4 style="font-size: 16px; font-weight: 800; margin-bottom: 4px;">Parents</h4>
+            <p style="font-size: 13px; color: var(--text-muted);">Understand school progress, log home routines, manage consent, and connect with teachers.</p>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+          <div>
+            <h4 style="font-size: 16px; font-weight: 800; margin-bottom: 4px;">Teachers</h4>
+            <p style="font-size: 13px; color: var(--text-muted);">Record official evaluation marks, log evidence-based classroom observations, and guide improvement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Problem Section -->
+  <section class="section-padding">
+    <div class="saas-container">
+      <div class="section-header">
+        <span class="section-eyebrow">The Core Problem</span>
+        <h2 class="section-title">Student progress shouldn't live in disconnected places.</h2>
+        <p class="section-description">
+          When academic marks, home habits, and classroom observations exist in separate silos, parents and teachers miss the full picture.
+        </p>
+      </div>
+
+      <div class="problem-bridge-grid">
+        <div class="problem-card">
+          <div class="feature-icon-wrapper" style="background: rgba(6, 182, 212, 0.1); color: #06b6d4;">
+            <i class="fas fa-user"></i>
+          </div>
+          <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">Student View</h3>
+          <p style="font-size: 14px; color: var(--text-muted);">Knows their own study hours, daily stress levels, and goal struggles, but lacks structured time management.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="feature-icon-wrapper" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">Parent View</h3>
+          <p style="font-size: 14px; color: var(--text-muted);">Sees home sleep duration, screen-time habits, and food routines, but lacks classroom academic context.</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="feature-icon-wrapper" style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6;">
+            <i class="fas fa-school"></i>
+          </div>
+          <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">Teacher View</h3>
+          <p style="font-size: 14px; color: var(--text-muted);">Tracks test evaluation scores, attendance, and classroom participation, but doesn't see home routine challenges.</p>
+        </div>
+      </div>
+
+      <div class="bridge-connector-banner">
+        <div style="font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9;">The EduBridge Solution</div>
+        <h3 style="font-size: 24px; font-weight: 800; margin-top: 6px;">Uniting All 3 Stakeholders into One Decision-Support Platform</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Features Section -->
+  <section id="features" class="section-padding" style="background: #ffffff; border-top: 1px solid var(--card-border);">
+    <div class="saas-container">
+      <div class="section-header">
+        <span class="section-eyebrow">Platform Capabilities</span>
+        <h2 class="section-title">Everything needed for complete student development.</h2>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fas fa-chart-line"></i></div>
+          <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">Academic Performance</h3>
+          <p style="font-size: 14px; color: var(--text-muted);">Track test scores, examination marks, subject trends, and assignment completion over time.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fas fa-calendar-alt"></i></div>
+          <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">AI Study Planner</h3>
+          <p style="font-size: 14px; color: var(--text-muted);">Automatically generate balanced daily timetables with study focus blocks and built-in rest periods.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fas fa-book-reader"></i></div>
+          <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">Study Session Logging</h3>
+          <p style="font-size: 14px; color: var(--text-muted);">Record self-directed study hours, topics revised, task goals, and pre-examination preparation.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fas fa-heartbeat"></i></div>
+          <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">Health & Mood Routine</h3>
+          <p style="font-size: 14px; color: var(--text-muted);">Log sleep duration, water intake, exercise, and non-clinical emotional mood check-ins.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fas fa-comments"></i></div>
+          <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">Parent-Teacher Direct Line</h3>
+          <p style="font-size: 14px; color: var(--text-muted);">Secure messaging between authorized parents and assigned subject teachers in one place.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fas fa-lightbulb"></i></div>
+          <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 8px;">Explainable AI Guidance</h3>
+          <p style="font-size: 14px; color: var(--text-muted);">Receive transparent recommendations with clear evidence data explaining why each plan was created.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Explainable AI Section -->
+  <section id="ai-section" class="section-padding">
+    <div class="saas-container">
+      <div class="section-header">
+        <span class="section-eyebrow">Transparent AI Decision Engine</span>
+        <h2 class="section-title">AI that understands the student's journey.</h2>
+        <p class="section-description">
+          EduBridge AI operates on clear, explainable decision logic—never mysterious black-box predictions.
+        </p>
+      </div>
+
+      <div class="ai-interactive-card">
+        <div>
+          <div class="ai-input-box">
+            <div style="font-size: 11px; font-weight: 800; color: #64748b; text-transform: uppercase;">PERMITTED DATA INPUTS</div>
+            <ul style="margin-top: 10px; font-size: 13px; color: #334155; line-height: 1.8;">
+              <li><i class="fas fa-check-circle" style="color: #4f46e5;"></i> Mathematics Midterm Score: <strong>62%</strong> (Dropped from 88%)</li>
+              <li><i class="fas fa-check-circle" style="color: #4f46e5;"></i> Pending Tasks: <strong>Quadratic Equations Practice Set</strong></li>
+              <li><i class="fas fa-check-circle" style="color: #4f46e5;"></i> Available Study Time: <strong>2.5 Hours Today</strong></li>
+              <li><i class="fas fa-check-circle" style="color: #4f46e5;"></i> Recorded Sleep: <strong>5.5 Hours (2 days low)</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div class="ai-output-box">
+            <div style="font-size: 11px; font-weight: 800; color: #4338ca; text-transform: uppercase;">AI GENERATED PLAN & EVIDENCE</div>
+            <h4 style="font-size: 16px; font-weight: 800; color: #1e1b4b; margin: 8px 0;">Targeted 45-Min Math Factoring Sprint</h4>
+            <p style="font-size: 13px; color: #3730a3; margin-bottom: 12px;">
+              Allocated 45 mins to polynomial factoring followed by 15 mins hydration break.
+            </p>
+
+            <div style="background: #ffffff; padding: 12px; border-radius: 8px; border: 1px solid #c7d2fe;">
+              <span style="font-weight: 700; font-size: 12px; color: #4f46e5;">Why this recommendation?</span>
+              <p style="font-size: 12px; color: #475569; margin-top: 4px;">
+                Math score dropped by 26% over recent evaluations while sleep duration was low. Recommends structured early practice before upcoming unit test.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Three Role Deep Dive Section -->
+  <section id="roles" class="section-padding" style="background: #ffffff; border-top: 1px solid var(--card-border);">
+    <div class="saas-container">
+      <div class="section-header">
+        <span class="section-eyebrow">Tailored Role Portals</span>
+        <h2 class="section-title">Built for Students, Parents, and Teachers.</h2>
+      </div>
+
+      <div class="role-cards-grid">
+        <div class="role-card-item student-theme">
+          <span style="font-size: 12px; font-weight: 800; color: var(--accent-cyan); text-transform: uppercase;">STUDENT PORTAL</span>
+          <h3 style="font-size: 22px; font-weight: 800; margin: 8px 0;">Plan. Learn. Improve.</h3>
+          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">
+            Students take ownership of their learning journey with personal goals, study session logs, mood check-ins, and AI timetables.
+          </p>
+          <a href="index.html" class="btn-saas-secondary" style="margin-top: auto;">Open Student Portal &rarr;</a>
+        </div>
+
+        <div class="role-card-item parent-theme">
+          <span style="font-size: 12px; font-weight: 800; color: var(--accent-emerald); text-transform: uppercase;">PARENT PORTAL</span>
+          <h3 style="font-size: 22px; font-weight: 800; margin: 8px 0;">Understand. Support. Connect.</h3>
+          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">
+            Parents gain clear visibility into academic marks, record home routines, manage data privacy consent, and message teachers.
+          </p>
+          <a href="index.html" class="btn-saas-secondary" style="margin-top: auto;">Open Parent Portal &rarr;</a>
+        </div>
+
+        <div class="role-card-item teacher-theme">
+          <span style="font-size: 12px; font-weight: 800; color: var(--brand-primary); text-transform: uppercase;">TEACHER PORTAL</span>
+          <h3 style="font-size: 22px; font-weight: 800; margin: 8px 0;">Observe. Guide. Support.</h3>
+          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">
+            Teachers enter evaluation scores, record observable classroom feedback, track attendance, and review AI class trends.
+          </p>
+          <a href="index.html" class="btn-saas-secondary" style="margin-top: auto;">Open Teacher Portal &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. How It Works -->
+  <section id="how-it-works" class="section-padding">
+    <div class="saas-container">
+      <div class="section-header">
+        <span class="section-eyebrow">Simple Workflow</span>
+        <h2 class="section-title">How EduBridge Works in 3 Steps</h2>
+      </div>
+
+      <div class="how-flow-grid">
+        <div class="flow-step-card">
+          <div class="flow-step-num">01</div>
+          <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 8px;">Connect</h3>
+          <p style="font-size: 14px; color: var(--text-muted);">
+            Students, parents, and teachers securely log in to their linked role-based portals.
+          </p>
+        </div>
+
+        <div class="flow-step-card">
+          <div class="flow-step-num">02</div>
+          <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 8px;">Understand</h3>
+          <p style="font-size: 14px; color: var(--text-muted);">
+            EduBridge organizes academic marks, home habits, and classroom observations into clear dashboards.
+          </p>
+        </div>
+
+        <div class="flow-step-card">
+          <div class="flow-step-num">03</div>
+          <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 8px;">Improve</h3>
+          <p style="font-size: 14px; color: var(--text-muted);">
+            Explainable AI provides personalized study schedules, habit tips, and proactive early support alerts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Privacy & Responsible AI -->
+  <section id="privacy" class="section-padding" style="background: #ffffff; border-top: 1px solid var(--card-border);">
+    <div class="saas-container">
+      <div class="section-header">
+        <span class="section-eyebrow">Trust & Privacy First</span>
+        <h2 class="section-title">Built with DPDP 2023 compliance and human oversight.</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+        <div style="background: var(--slate-50); padding: 24px; border-radius: 16px; border: 1px solid var(--card-border);">
+          <i class="fas fa-lock" style="font-size: 24px; color: var(--brand-primary); margin-bottom: 12px;"></i>
+          <h4 style="font-size: 16px; font-weight: 800; margin-bottom: 6px;">Secure Access</h4>
+          <p style="font-size: 13px; color: var(--text-muted);">Strict role-based access control protecting student records.</p>
+        </div>
+
+        <div style="background: var(--slate-50); padding: 24px; border-radius: 16px; border: 1px solid var(--card-border);">
+          <i class="fas fa-user-shield" style="font-size: 24px; color: var(--accent-emerald); margin-bottom: 12px;"></i>
+          <h4 style="font-size: 16px; font-weight: 800; margin-bottom: 6px;">Parental Consent</h4>
+          <p style="font-size: 13px; color: var(--text-muted);">Granular data sharing controls aligned with Indian DPDP Act 2023.</p>
+        </div>
+
+        <div style="background: var(--slate-50); padding: 24px; border-radius: 16px; border: 1px solid var(--card-border);">
+          <i class="fas fa-file-alt" style="font-size: 24px; color: var(--accent-cyan); margin-bottom: 12px;"></i>
+          <h4 style="font-size: 16px; font-weight: 800; margin-bottom: 6px;">Explainable AI</h4>
+          <p style="font-size: 13px; color: var(--text-muted);">Every AI suggestion includes evidence traces and confidence levels.</p>
+        </div>
+
+        <div style="background: var(--slate-50); padding: 24px; border-radius: 16px; border: 1px solid var(--card-border);">
+          <i class="fas fa-heart" style="font-size: 24px; color: var(--accent-rose); margin-bottom: 12px;"></i>
+          <h4 style="font-size: 16px; font-weight: 800; margin-bottom: 6px;">Human Oversight</h4>
+          <p style="font-size: 13px; color: var(--text-muted);">Decision-support engine operating under human adult supervision.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Final CTA -->
+  <section class="section-padding">
+    <div class="saas-container">
+      <div style="background: linear-gradient(135deg, #1e1b4b, #312e81); border-radius: 32px; padding: 60px 40px; text-align: center; color: white; box-shadow: 0 25px 50px rgba(49, 46, 129, 0.3);">
+        <h2 style="font-size: 40px; font-weight: 800; letter-spacing: -1px; margin-bottom: 14px;">Build a better learning journey with EduBridge.</h2>
+        <p style="font-size: 18px; color: #c7d2fe; max-width: 600px; margin: 0 auto 32px auto;">
+          Connect academic progress, daily study planning, and meaningful support in one platform.
+        </p>
+
+        <a href="index.html" class="btn-saas-primary" style="padding: 16px 36px; font-size: 16px; background: white; color: #4f46e5;">
+          <i class="fas fa-rocket"></i> Launch EduBridge Portal
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Footer -->
+  <footer class="saas-footer">
+    <div class="saas-container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="saas-brand" style="margin-bottom: 14px; display: inline-flex;">
+            <div class="saas-brand-logo">EB</div>
+            <span class="saas-brand-text">EduBridge</span>
+          </a>
+          <p style="font-size: 13px; color: var(--text-muted); max-width: 300px;">
+            AI-Powered Student Academic, Health, and Well-Being Management Platform.
+          </p>
+        </div>
+
+        <div>
+          <h5 style="font-size: 14px; font-weight: 700; margin-bottom: 14px;">Platform</h5>
+          <ul style="list-style: none; padding: 0; font-size: 13px; line-height: 2;">
+            <li><a href="#features" style="color: var(--text-muted); text-decoration: none;">Features</a></li>
+            <li><a href="#how-it-works" style="color: var(--text-muted); text-decoration: none;">How It Works</a></li>
+            <li><a href="#ai-section" style="color: var(--text-muted); text-decoration: none;">Explainable AI</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 style="font-size: 14px; font-weight: 700; margin-bottom: 14px;">Portals</h5>
+          <ul style="list-style: none; padding: 0; font-size: 13px; line-height: 2;">
+            <li><a href="index.html" style="color: var(--text-muted); text-decoration: none;">Student Portal</a></li>
+            <li><a href="index.html" style="color: var(--text-muted); text-decoration: none;">Parent Portal</a></li>
+            <li><a href="index.html" style="color: var(--text-muted); text-decoration: none;">Teacher Portal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 style="font-size: 14px; font-weight: 700; margin-bottom: 14px;">Compliance</h5>
+          <ul style="list-style: none; padding: 0; font-size: 13px; line-height: 2;">
+            <li><a href="#privacy" style="color: var(--text-muted); text-decoration: none;">DPDP 2023 Consent</a></li>
+            <li><a href="#privacy" style="color: var(--text-muted); text-decoration: none;">Responsible AI Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 EduBridge. All rights reserved.</div>
+        <div>Built for Holistic Student Academic & Well-Being Development.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobileNavToggle')?.addEventListener('click', () => {
+      document.getElementById('saasNavLinks')?.classList.toggle('active');
+    });
+
+    document.querySelectorAll('#saasNavLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('saasNavLinks')?.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
