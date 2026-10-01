@@ -8,7 +8,7 @@ module.exports = (req, res) => {
 
   res.status(200).json({
     status: 'online',
-    system: 'EduBridge AI-Powered Academic & Well-Being Platform',
+    system: 'BridgeSTU AI-Powered Academic & Well-Being Platform',
     environment: process.env.VERCEL_ENV || 'production',
     supabaseUrl: supabaseUrl,
     supabaseConfigured: true,
