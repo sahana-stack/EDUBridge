@@ -52,13 +52,17 @@
       </button>
     </div>
 
-    <!-- Supabase Status & User Profile Badge -->
+    <!-- Supabase Status, Login & User Profile Badge -->
     <div style="display: flex; align-items: center; gap: 12px;">
       <span class="badge badge-warning" id="supabaseStatusBadge" style="cursor: pointer; font-size: 11px; padding: 6px 12px; border-radius: 20px;" onclick="openSupabaseModal()" title="Click to configure Supabase Connection">
         <i class="fas fa-database"></i> Supabase: Config
       </span>
 
-      <div class="user-profile-badge" id="profileBadge">
+      <button class="btn btn-primary" id="headerLoginBtn" style="padding: 6px 14px; font-size: 13px; border-radius: 20px; font-weight: 600;" onclick="window.openLoginModal()">
+        <i class="fas fa-sign-in-alt"></i> Log In / Switch Portal
+      </button>
+
+      <div class="user-profile-badge" id="profileBadge" style="cursor: pointer;" onclick="window.openLoginModal()" title="Click to Switch User / Log Out">
         <div class="user-avatar" id="userAvatar">AM</div>
         <div class="user-info">
           <span class="user-name" id="userName">Alex Morgan</span>

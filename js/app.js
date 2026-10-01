@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial Setup
   init();
 
+  // Initial Setup
+  init();
+
   function init() {
     setupRoleSwitcher();
     setupAiDrawer();
@@ -42,7 +45,20 @@ document.addEventListener('DOMContentLoaded', () => {
       renderApp();
     });
 
-    renderApp();
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('login') === 'true' || params.has('role')) {
+      const requestedRole = params.get('role') || 'student';
+      if (['student', 'parent', 'teacher'].includes(requestedRole)) {
+        store.setRole(requestedRole);
+        updateRoleButtons(requestedRole);
+      }
+      renderApp();
+      if (params.get('login') === 'true') {
+        setTimeout(() => window.openLoginModal(requestedRole), 300);
+      }
+    } else {
+      renderApp();
+    }
   }
 
   // Role Switcher Setup
@@ -67,6 +83,116 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Interactive Global Portal Login Modal
+  window.openLoginModal = function(selectedRole = 'student') {
+    const container = document.getElementById('modalContainer');
+    const overlay = document.getElementById('modalOverlay');
+    if (!container || !overlay) return;
+
+    const userAccounts = {
+      student: { name: 'Alex Morgan', email: 'alex.morgan@edubridge.edu', roleTitle: 'Student Portal', class: 'Grade 10-A' },
+      parent: { name: 'Sarah Morgan', email: 'sarah.m@gmail.com', roleTitle: 'Parent Portal', class: 'Linked Parent' },
+      teacher: { name: 'Dr. Robert Vance', email: 'r.vance@edubridge.edu', roleTitle: 'Teacher Portal', class: 'Math & Physics Faculty' }
+    };
+
+    function renderModalContent(roleKey) {
+      const acc = userAccounts[roleKey] || userAccounts.student;
+      container.innerHTML = `
+        <div class="modal-header" style="border-bottom: 1px solid #e2e8f0; padding-bottom: 14px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div class="brand-logo" style="width: 36px; height: 36px; font-size: 16px;">EB</div>
+            <div>
+              <h3 class="modal-title" style="font-size: 18px; font-weight: 800; color: #0f172a;">EduBridge Portal Login</h3>
+              <span style="font-size: 12px; color: #64748b;">Sign in with your role credentials or use 1-Click demo access</span>
+            </div>
+          </div>
+          <button class="modal-close" onclick="document.getElementById('modalOverlay').classList.remove('active')">&times;</button>
+        </div>
+
+        <div class="modal-body" style="padding: 20px 0;">
+          <!-- Role Selection Tabs -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 20px; background: #f8fafc; padding: 6px; border-radius: 12px; border: 1px solid #e2e8f0;">
+            <button class="btn ${roleKey === 'student' ? 'btn-primary' : 'btn-secondary'}" style="font-size: 13px; padding: 10px 6px; font-weight: 700; border: none;" onclick="window._switchLoginTab('student')">
+              <i class="fas fa-user-graduate"></i> Student
+            </button>
+            <button class="btn ${roleKey === 'parent' ? 'btn-primary' : 'btn-secondary'}" style="font-size: 13px; padding: 10px 6px; font-weight: 700; border: none;" onclick="window._switchLoginTab('parent')">
+              <i class="fas fa-users-between-lines"></i> Parent
+            </button>
+            <button class="btn ${roleKey === 'teacher' ? 'btn-primary' : 'btn-secondary'}" style="font-size: 13px; padding: 10px 6px; font-weight: 700; border: none;" onclick="window._switchLoginTab('teacher')">
+              <i class="fas fa-chalkboard-teacher"></i> Teacher
+            </button>
+          </div>
+
+          <!-- Credential Form -->
+          <form onsubmit="window._submitLoginForm(event, '${roleKey}')">
+            <div class="form-group" style="margin-bottom: 14px;">
+              <label class="form-label" style="font-weight: 700; font-size: 13px; color: #334155;">Institutional Email</label>
+              <input type="email" id="loginEmail" class="form-control" value="${acc.email}" required style="padding: 10px 14px; border-radius: 8px;">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 16px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <label class="form-label" style="font-weight: 700; font-size: 13px; color: #334155; margin-bottom: 0;">Password</label>
+                <a href="#" style="font-size: 12px; color: #4f46e5; text-decoration: none;" onclick="alert('Demo Mode: Enter password123 or use 1-Click Demo buttons below.')">Forgot Password?</a>
+              </div>
+              <div style="position: relative;">
+                <input type="password" id="loginPassword" class="form-control" value="password123" required style="padding: 10px 14px; border-radius: 8px;">
+                <i class="fas fa-eye" style="position: absolute; right: 12px; top: 12px; color: #94a3b8; cursor: pointer;" onclick="const el = document.getElementById('loginPassword'); el.type = el.type === 'password' ? 'text' : 'password';"></i>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 15px; font-weight: 700; border-radius: 10px; margin-bottom: 20px; background: linear-gradient(135deg, #4f46e5, #4338ca);">
+              <i class="fas fa-sign-in-alt"></i> Sign In to ${acc.roleTitle}
+            </button>
+          </form>
+
+          <!-- 1-Click Instant Demo Login Strip -->
+          <div style="border-top: 1px solid #e2e8f0; padding-top: 16px;">
+            <div style="font-size: 11px; font-weight: 800; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">
+              <i class="fas fa-bolt" style="color: #eab308;"></i> Quick 1-Click Demo Sign In
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+              <div style="background: #f1f5f9; padding: 10px; border-radius: 8px; cursor: pointer; text-align: center; border: 1px solid #cbd5e1;" onclick="window._directLogin('student')">
+                <div style="font-weight: 700; font-size: 12px; color: #0f172a;"><i class="fas fa-user-graduate" style="color: #06b6d4;"></i> Alex M.</div>
+                <div style="font-size: 10px; color: #64748b;">Student Demo</div>
+              </div>
+              <div style="background: #f1f5f9; padding: 10px; border-radius: 8px; cursor: pointer; text-align: center; border: 1px solid #cbd5e1;" onclick="window._directLogin('parent')">
+                <div style="font-weight: 700; font-size: 12px; color: #0f172a;"><i class="fas fa-users-between-lines" style="color: #10b981;"></i> Sarah M.</div>
+                <div style="font-size: 10px; color: #64748b;">Parent Demo</div>
+              </div>
+              <div style="background: #f1f5f9; padding: 10px; border-radius: 8px; cursor: pointer; text-align: center; border: 1px solid #cbd5e1;" onclick="window._directLogin('teacher')">
+                <div style="font-weight: 700; font-size: 12px; color: #0f172a;"><i class="fas fa-chalkboard-teacher" style="color: #4f46e5;"></i> Dr. Vance</div>
+                <div style="font-size: 10px; color: #64748b;">Teacher Demo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    window._switchLoginTab = function(r) {
+      renderModalContent(r);
+    };
+
+    window._submitLoginForm = function(e, r) {
+      e.preventDefault();
+      window._directLogin(r);
+    };
+
+    window._directLogin = function(r) {
+      store.setRole(r);
+      updateRoleButtons(r);
+      currentTab = 'dashboard';
+      renderApp();
+      overlay.classList.remove('active');
+      const user = store.getCurrentUser();
+      showToast(`Authenticated as ${user.name} (${r.toUpperCase()} PORTAL)`);
+    };
+
+    renderModalContent(selectedRole);
+    overlay.classList.add('active');
+  };
 
   // Render Full Application View based on Current Role / Mode
   function renderApp() {
